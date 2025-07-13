@@ -38,7 +38,7 @@ interface ProjectState {
 export const useProjectStore = create<ProjectState>()(
   persist(
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    (set, get) => ({
+    (set, _get) => ({
       projects: [],
 
       addProject: name =>

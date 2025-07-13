@@ -1,10 +1,9 @@
-
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { DragDropContext, Droppable, type DropResult } from '@hello-pangea/dnd';
 import { useProjectStore, type Status } from '../stores/projectStore';
 import Column from './Column';
 import TaskModal from './TaskModal';
-import * as S from './styles/Board.styled'; 
+import * as S from './styles/Board.styled';
 
 const statuses: Status[] = ['todo', 'in progress', 'done'];
 
@@ -34,7 +33,6 @@ export default function Board() {
 
   return (
     <S.Container>
-   
       <S.Header>
         <S.BackLink to="/Dashboard">← Back</S.BackLink>
         <S.ProjectName>{project.name}</S.ProjectName>

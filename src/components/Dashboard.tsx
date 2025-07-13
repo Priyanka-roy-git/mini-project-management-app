@@ -1,6 +1,5 @@
 
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useProjectStore } from '../stores/projectStore';
 import * as S from './styles/Dashboard.styled';
 

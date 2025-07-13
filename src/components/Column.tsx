@@ -3,12 +3,13 @@ import { Draggable } from '@hello-pangea/dnd';
 import type { Task } from '../stores/projectStore';
 import TaskCard from './TaskCard';
 import * as S from './styles/Column.styled';
+import type { DroppableProvidedProps } from '@hello-pangea/dnd';
 
 interface Props {
   title: string;
   tasks: Task[];
   projectId: string;
-  droppableProps: React.HTMLAttributes<HTMLDivElement>;
+  droppableProps: DroppableProvidedProps; 
 }
 
 const Column = forwardRef<HTMLDivElement, PropsWithChildren<Props>>(
@@ -29,7 +30,7 @@ const Column = forwardRef<HTMLDivElement, PropsWithChildren<Props>>(
           </Draggable>
         ))}
 
-        {children} 
+        {children}
       </S.TaskList>
     </S.Container>
   )

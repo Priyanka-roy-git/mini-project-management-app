@@ -22,7 +22,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  /* ⬇️ Allow children like ProjectList to grow/shrink properly */
   min-height: 0;
 
   @media (max-width: 640px) {
@@ -100,16 +99,16 @@ export const AddButton = styled.button`
 
 
 export const ProjectList = styled.ul`
-  flex: 1; /* Fill remaining space inside Container */
+  flex: 1; 
   overflow-y: auto;
-  min-height: 0;  /* Prevent scroll cutoff */
+  min-height: 0;  
   margin-top: 0.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   padding-right: 0.25rem;
 
-  /* Custom scrollbar styling */
+ 
   scrollbar-width: thin;
   scrollbar-color: #4e1f7aff transparent;
 
